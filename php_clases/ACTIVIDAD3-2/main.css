@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Fredoka One', cursive;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 100;
+}
+
+body {
+    background: #000 url("fondo.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top;
+}
+
+.content-form {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+.form {
+    background-color: #20202091;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    align-items: center;
+    border-radius: 20px;
+    border-bottom-left-radius: 100px;
+    border-top-right-radius: 50px;
+}
+
+.input {
+    background: linear-gradient(-35deg, rgba(0, 0, 0, 0) 10%, rgba(255, 3, 3, 0.6) 70%);
+    display: flex;
+    width: 520px;
+    margin: 8px 0;
+    outline: none;
+    border: none;
+    padding: 10px 8px;
+    border-radius: 10px;
+    color: #000;
+}
+
+.input:hover {
+    background: linear-gradient(to bottom, rgba(31, 31, 31, 0), #f33);
+    border-bottom: 2px solid #f45;
+}
+
+.input:focus {
+    color: #fff;
+}
+
+.input::placeholder {
+    color: #ddd;
+}
+.submit {
+    display: flex;
+    width: 300px;
+    height: 60px;
+    color: #fff;
+    justify-content: center;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+}
+
+.submit:hover {
+    background: #45f;
+    border: none;
+}
+
+.submit::before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(#008cff, #0800ff);
+    width: 300px;
+    height: 350px;
+    animation: rotarxD 2s linear infinite;
+}
+
+@keyframes rotarxD {
+    from {
+        rotate: 0deg;
+    }
+    to{
+        rotate: 360deg;
+    }
+}
+
+.submit::after {
+    position: absolute;
+    background: #000;
+    content: "Enviar";
+    width: 294px;
+    height: 54px;
+    border-radius: 8px;
+    line-height: 2;
+    font-size: 1.5em;
+}
